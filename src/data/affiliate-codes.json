@@ -1,0 +1,17 @@
+[
+  {"id":"ac1","creatorId":"c1","code":"MARIA15","platform":"instagram","discountPercent":15,"status":"active","createdAt":"2026-01-20","expiresAt":"2026-06-20","totalUses":23,"totalRevenue":890},
+  {"id":"ac2","creatorId":"c2","code":"BARCRAFT20","platform":"instagram","discountPercent":20,"status":"active","createdAt":"2026-01-15","expiresAt":"2026-06-15","totalUses":45,"totalRevenue":2100},
+  {"id":"ac3","creatorId":"c3","code":"LUXESIPS15","platform":"instagram","discountPercent":15,"status":"active","createdAt":"2026-01-22","expiresAt":"2026-06-22","totalUses":31,"totalRevenue":1450},
+  {"id":"ac4","creatorId":"c10","code":"HAPPYHOST15","platform":"instagram","discountPercent":15,"status":"active","createdAt":"2026-01-20","expiresAt":"2026-06-20","totalUses":34,"totalRevenue":1620},
+  {"id":"ac5","creatorId":"c11","code":"HANNAH10","platform":"instagram","discountPercent":10,"status":"active","createdAt":"2026-02-05","expiresAt":"2026-03-20","totalUses":0,"totalRevenue":0},
+  {"id":"ac6","creatorId":"c18","code":"EMMA20","platform":"instagram","discountPercent":20,"status":"active","createdAt":"2026-01-14","expiresAt":"2026-07-14","totalUses":12,"totalRevenue":560},
+  {"id":"ac7","creatorId":"c19","code":"SAKE15","platform":"tiktok","discountPercent":15,"status":"active","createdAt":"2026-03-01","expiresAt":"2026-09-01","totalUses":0,"totalRevenue":0},
+  {"id":"ac8","creatorId":"c20","code":"BELLA10","platform":"instagram","discountPercent":10,"status":"active","createdAt":"2026-03-05","expiresAt":"2026-09-05","totalUses":0,"totalRevenue":0},
+  {"id":"ac9","creatorId":"c21","code":"ALEXROCKS15","platform":"tiktok","discountPercent":15,"status":"active","createdAt":"2026-03-01","expiresAt":"2026-03-22","totalUses":0,"totalRevenue":0},
+  {"id":"ac10","creatorId":"c22","code":"SAMSIIPS10","platform":"instagram","discountPercent":10,"status":"active","createdAt":"2026-01-15","expiresAt":"2026-03-18","totalUses":3,"totalRevenue":140},
+  {"id":"ac11","creatorId":"c23","code":"JBMIX20","platform":"tiktok","discountPercent":20,"status":"active","createdAt":"2026-01-16","expiresAt":"2026-03-21","totalUses":8,"totalRevenue":380},
+  {"id":"ac12","creatorId":"c24","code":"MEGDRINKS15","platform":"instagram","discountPercent":15,"status":"active","createdAt":"2026-03-10","expiresAt":"2026-09-10","totalUses":0,"totalRevenue":0},
+  {"id":"ac13","creatorId":"c25","code":"VICTORIA15","platform":"instagram","discountPercent":15,"status":"active","createdAt":"2026-02-05","expiresAt":"2026-08-05","totalUses":18,"totalRevenue":850},
+  {"id":"ac14","creatorId":"c1","code":"MARIA10TT","platform":"tiktok","discountPercent":10,"status":"active","createdAt":"2026-02-15","expiresAt":"2026-08-15","totalUses":8,"totalRevenue":310},
+  {"id":"ac15","creatorId":"c2","code":"BARCRAFT15TT","platform":"tiktok","discountPercent":15,"status":"active","createdAt":"2026-02-01","expiresAt":"2026-03-19","totalUses":12,"totalRevenue":480}
+]

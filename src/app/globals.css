@@ -1,26 +1,159 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-brand-50: #fdf8f0;
+  --color-brand-100: #f9edda;
+  --color-brand-200: #f0d5a8;
+  --color-brand-300: #e5b76e;
+  --color-brand-400: #d4943a;
+  --color-brand-500: #c07d2a;
+  --color-brand-600: #a3651f;
+  --color-brand-700: #845019;
+  --color-brand-800: #6b3f15;
+  --color-brand-900: #5a3413;
+
+  --color-surface-50: #f8f9fa;
+  --color-surface-100: #f1f3f5;
+  --color-surface-200: #e9ecef;
+  --color-surface-300: #dee2e6;
+  --color-surface-400: #ced4da;
+  --color-surface-500: #adb5bd;
+  --color-surface-600: #868e96;
+  --color-surface-700: #495057;
+  --color-surface-800: #1a1b1e;
+  --color-surface-850: #141517;
+  --color-surface-900: #0f1012;
+  --color-surface-950: #09090b;
+
+  --color-pipeline-sourced: #94a3b8;
+  --color-pipeline-contacted: #60a5fa;
+  --color-pipeline-responded: #38bdf8;
+  --color-pipeline-approved: #34d399;
+  --color-pipeline-onboarded: #a78bfa;
+  --color-pipeline-gifted: #f472b6;
+  --color-pipeline-posted: #fb923c;
+  --color-pipeline-firstsale: #facc15;
+  --color-pipeline-active: #22c55e;
+  --color-pipeline-inactive: #6b7280;
+
+  --color-platform-instagram: #E1306C;
+  --color-platform-tiktok: #00f2ea;
+  --color-platform-amazon: #ff9900;
+  --color-platform-youtube: #FF0000;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --background: var(--color-surface-950);
+  --foreground: var(--color-surface-100);
+  --card: var(--color-surface-900);
+  --card-foreground: var(--color-surface-100);
+  --border: #2a2b2e;
+  --muted: var(--color-surface-800);
+  --muted-foreground: var(--color-surface-600);
+  --accent: var(--color-brand-400);
+  --accent-foreground: var(--color-surface-950);
+  --sidebar: var(--color-surface-900);
+  --sidebar-foreground: var(--color-surface-400);
+  --sidebar-active: var(--color-brand-400);
+}
+
+.light {
+  --background: #ffffff;
+  --foreground: var(--color-surface-950);
+  --card: #ffffff;
+  --card-foreground: var(--color-surface-950);
+  --border: var(--color-surface-200);
+  --muted: var(--color-surface-100);
+  --muted-foreground: var(--color-surface-700);
+  --accent: var(--color-brand-400);
+  --accent-foreground: #ffffff;
+  --sidebar: var(--color-surface-50);
+  --sidebar-foreground: var(--color-surface-700);
+  --sidebar-active: var(--color-brand-500);
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
+}
+
+/* Tour animations */
+@keyframes tour-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tour-ring-pulse {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 0 rgba(212, 148, 58, 0);
+  }
+  50% {
+    opacity: 0.8;
+    box-shadow: 0 0 12px 2px rgba(212, 148, 58, 0.3);
+  }
+}
+
+.animate-tour-fade-in {
+  animation: tour-fade-in 300ms ease-out;
+}
+
+.animate-tour-ring-pulse {
+  animation: tour-ring-pulse 2s ease-in-out infinite;
+}
+
+@keyframes tour-bounce {
+  0%, 100% { transform: translateY(0); }
+  30% { transform: translateY(-12px); }
+  50% { transform: translateY(0); }
+  70% { transform: translateY(-6px); }
+  85% { transform: translateY(0); }
+}
+
+.animate-tour-bounce {
+  animation: tour-bounce 1s ease-in-out;
+}
+
+/* Screen reader only utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

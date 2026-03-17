@@ -1,0 +1,10 @@
+[
+  {"id":"s1","name":"Gosia","role":"Brand & Community Manager","email":"gosia@barsys.com","department":"marketing"},
+  {"id":"s2","name":"Lexi","role":"Influencer & Affiliate Marketing Manager","email":"lexi@barsys.com","department":"marketing"},
+  {"id":"s3","name":"Kirti","role":"Production Team Lead","email":"kirti@barsys.com","department":"production"},
+  {"id":"s4","name":"Marisol","role":"Marketing Director","email":"marisol@barsys.com","department":"marketing"},
+  {"id":"s5","name":"Austin","role":"Operations Manager","email":"austin@barsys.com","department":"operations"},
+  {"id":"s6","name":"Madeleine","role":"E-commerce Manager","email":"madeleine@barsys.com","department":"ecommerce"},
+  {"id":"s7","name":"Frank","role":"E-commerce Associate","email":"frank@barsys.com","department":"ecommerce"},
+  {"id":"s8","name":"Akshet","role":"CEO/Founder","email":"akshet@barsys.com","department":"executive"}
+]
