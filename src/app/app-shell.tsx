@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { Sidebar } from "@/components/layout/sidebar";
 import { TopBar } from "@/components/layout/top-bar";
@@ -12,13 +12,22 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const { theme } = useThemeStore();
   const pathname = usePathname();
   const isLoginPage = pathname === "/login";
+  const [isEmbedded, setIsEmbedded] = useState(false);
 
   useEffect(() => {
     document.documentElement.classList.remove("dark", "light");
     document.documentElement.classList.add(theme);
   }, [theme]);
 
-  if (isLoginPage) {
+  useEffect(() => {
+    try {
+      setIsEmbedded(window.self !== window.top);
+    } catch {
+      setIsEmbedded(true);
+    }
+  }, []);
+
+  if (isLoginPage || isEmbedded) {
     return <>{children}</>;
   }
 
