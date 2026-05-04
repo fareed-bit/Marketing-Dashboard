@@ -1,6 +1,7 @@
 "use client";
 
 import { useRoleStore } from "@/stores/use-role-store";
+import { useSession } from "next-auth/react";
 import { StatCard } from "@/components/ui/stat-card";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,7 +14,9 @@ import {
 import Link from "next/link";
 
 export default function HomePage() {
-  const { activeRole, userName } = useRoleStore();
+  const { activeRole } = useRoleStore();
+  const { data: session } = useSession();
+  const userName = session?.user?.name?.split(" ")[0] ?? "there";
   const today = new Date();
   const greeting = today.getHours() < 12 ? "Good morning" : today.getHours() < 17 ? "Good afternoon" : "Good evening";
   const dateStr = today.toLocaleDateString("en-US", { weekday: "long", year: "numeric", month: "long", day: "numeric" });

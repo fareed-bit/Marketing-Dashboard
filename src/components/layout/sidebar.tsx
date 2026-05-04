@@ -3,14 +3,12 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { useRoleStore } from "@/stores/use-role-store";
 import { navigation, type NavSection } from "@/config/navigation";
 import { ChevronLeft, ChevronRight, HelpCircle } from "lucide-react";
 import { useState, useRef, useCallback } from "react";
 
 export function Sidebar() {
   const pathname = usePathname();
-  const { activeRole } = useRoleStore();
   const [collapsed, setCollapsed] = useState(false);
   const [tooltip, setTooltip] = useState<{ text: string; top: number; left: number } | null>(null);
   const tooltipTimeout = useRef<ReturnType<typeof setTimeout>>(null);
@@ -108,28 +106,6 @@ export function Sidebar() {
         })}
       </nav>
 
-      {/* Role indicator */}
-      <div className="border-t border-[var(--border)] p-3">
-        {!collapsed ? (
-          <div className="flex items-center gap-2">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-[var(--accent-foreground)]">
-              {activeRole === "brand" ? "G" : "L"}
-            </div>
-            <div className="min-w-0">
-              <p className="text-sm font-medium truncate">{activeRole === "brand" ? "Gosia" : "Lexi"}</p>
-              <p className="text-xs text-[var(--muted-foreground)] truncate">
-                {activeRole === "brand" ? "Brand & Community" : "Creator & Affiliate"}
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="flex justify-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--accent)] text-xs font-bold text-[var(--accent-foreground)]">
-              {activeRole === "brand" ? "G" : "L"}
-            </div>
-          </div>
-        )}
-      </div>
       {/* Help tooltip */}
       {tooltip && (
         <div
